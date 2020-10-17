@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BC4DB8A-78A2-4EEA-8A21-E8B85CEC30D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>src</RootNamespace>
+    <AssemblyName>src</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>C:\Users\Alienware\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.30\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.Core.1.5.0.6\lib\net45\HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer.WinForms, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.WinForms.1.5.0.6\lib\net45\HtmlRenderer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.PowerPoint.15.0.4420.1017\lib\net20\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftOfficeCore.15.0.0\lib\net35\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.10.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.PdfFocus, Version=7.4.2.27, Culture=neutral, PublicKeyToken=0b79b934109b3e9e, processorArchitecture=MSIL">
+      <HintPath>..\packages\sautinsoft.pdffocus.7.4.2.27\lib\net47\SautinSoft.PdfFocus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.112.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="client\Client.cs" />
+    <Compile Include="DataGridViewColumns\DataGridViewHTMLColumn.cs" />
+    <Compile Include="DataGridViewColumns\DataGridViewHTMLColumnScrollbars.cs" />
+    <Compile Include="file\contentpage.cs" />
+    <Compile Include="file\excelFile.cs" />
+    <Compile Include="file\File.cs" />
+    <Compile Include="file\pdfFile.cs" />
+    <Compile Include="file\pptxFile.cs" />
+    <Compile Include="file\txtFile.cs" />
+    <Compile Include="file\wordFile.cs" />
+    <Compile Include="form\createNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\createNewProject.Designer.cs">
+      <DependentUpon>createNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\createTM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\createTM.Designer.cs">
+      <DependentUpon>createTM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\dictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\dictionary.Designer.cs">
+      <DependentUpon>dictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\editor.Designer.cs">
+      <DependentUpon>editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmWaitForm.Designer.cs">
+      <DependentUpon>frmWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\fuzzymatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fuzzymatches.Designer.cs">
+      <DependentUpon>fuzzymatches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\importTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\importTB.Designer.cs">
+      <DependentUpon>importTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\machineTranslation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\machineTranslation.Designer.cs">
+      <DependentUpon>machineTranslation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\preview.Designer.cs">
+      <DependentUpon>preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\projectfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\projectfiles.Designer.cs">
+      <DependentUpon>projectfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\raw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\raw.Designer.cs">
+      <DependentUpon>raw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\TranslationAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\TranslationAll.Designer.cs">
+      <DependentUpon>TranslationAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\webrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\webrowser.Designer.cs">
+      <DependentUpon>webrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="language\Language.cs" />
+    <Compile Include="language\ListLanguage.cs" />
+    <Compile Include="machinetranslator\machineTranslation.cs" />
+    <Compile Include="machinetranslator\machineTranslationMyMemory.cs" />
+    <Compile Include="machinetranslator\machineTranslationOpenNMT.cs" />
+    <Compile Include="machinetranslator\machineTranslationResult.cs" />
+    <Compile Include="machinetranslator\Mymemory.cs" />
+    <Compile Include="machinetranslator\OpenNMT.cs" />
+    <Compile Include="machinetranslator\openNMTPost.cs" />
+    <Compile Include="machinetranslator\urlAPI.cs" />
+    <Compile Include="messagebox\TextOfMessageBox.cs" />
+    <Compile Include="processing\excelProc.cs" />
+    <Compile Include="processing\exportCSV.cs" />
+    <Compile Include="processing\pdfProc.cs" />
+    <Compile Include="processing\pptxProc.cs" />
+    <Compile Include="processing\txtProc.cs" />
+    <Compile Include="processing\wordProc.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="project\project.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="segment\Segment.cs" />
+    <Compile Include="semanticsimilarity\semanticSimilarity.cs" />
+    <Compile Include="semanticsimilarity\semanticSimilarityAPI.cs" />
+    <Compile Include="semanticsimilarity\semanticSimilarityPost.cs" />
+    <Compile Include="TB\tb.cs" />
+    <Compile Include="TB\tbOff.cs" />
+    <Compile Include="TB\tbOffline.cs" />
+    <Compile Include="TB\tbProc.cs" />
+    <Compile Include="TB\wikimedia.cs" />
+    <Compile Include="TB\wikiUrl.cs" />
+    <Compile Include="Text\txt.cs" />
+    <Compile Include="TM\DAOTM.cs" />
+    <Compile Include="TM\tablename.cs" />
+    <Compile Include="TM\TM.cs" />
+    <Compile Include="TM\TMDATA.cs" />
+    <Compile Include="TM\tmonline.cs" />
+    <Compile Include="TM\tmonlinedata.cs" />
+    <Compile Include="TM\tmonlineURL.cs" />
+    <Compile Include="XML\readwriteXML.cs" />
+    <EmbeddedResource Include="DataGridViewColumns\DataGridViewHTMLColumn.resx">
+      <DependentUpon>DataGridViewHTMLColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\createNewProject.resx">
+      <DependentUpon>createNewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\createTM.resx">
+      <DependentUpon>createTM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\dictionary.resx">
+      <DependentUpon>dictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\editor.resx">
+      <DependentUpon>editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmWaitForm.resx">
+      <DependentUpon>frmWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fuzzymatches.resx">
+      <DependentUpon>fuzzymatches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\importTB.resx">
+      <DependentUpon>importTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\machineTranslation.resx">
+      <DependentUpon>machineTranslation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\preview.resx">
+      <DependentUpon>preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\projectfiles.resx">
+      <DependentUpon>projectfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\raw.resx">
+      <DependentUpon>raw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\TranslationAll.resx">
+      <DependentUpon>TranslationAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\webrowser.resx">
+      <DependentUpon>webrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resource\elipsis.png" />
+    <Content Include="Resource\red-triangle.png" />
+    <Content Include="TBDB\tb.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TMDB\TM.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
